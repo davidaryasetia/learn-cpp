@@ -1,25 +1,30 @@
 #include <iostream>
 
-int main()
-{
+// declare using namespace std for output input to make code readabla
+using namespace std;
 
-  double p;
-  double q;
-  double c;
+int main() {
+  double pesos, reais, soles, dollars;
 
-  double dollars;
+  // 4. Question calculator
+  cout << "Enter number of Colombian Pesos: ";
+  cin >> pesos;
 
-  std::cout << "🇲🇽 Enter number of Pesos: ";
-  std::cin >> p;
+  cout << "Enter number of Brazilian Reais: ";
+  cin >> reais;
 
-  std::cout << "🇬🇹 Enter number of Guatemalan Quetzals: ";
-  std::cin >> q;
+  cout << "Enter number of Peruvian Soles: ";
+  cin >> soles;
 
-  std::cout << "🇸🇻 Enter number of Salvadoran Colons: ";
-  std::cin >> c;
+  /* Formula to Calculate Pesos, Reais, Soles to usd 
+  1 Pesos = 0.018;
+  1 reais = 0.20;
+  1 soles = 0.27;
+  */
+  
+  // 8. Initialize dollar Formula to combine all curency in dollar (pesos, reais, sole)
+  dollars = ((0.018 * pesos) + (0.20 * reais) + (0.27 * soles));
 
-  dollars = 0.049 * p + 0.1305 * q + 0.1144 * c;
-
-  std::cout << "Total USD = $" << dollars << "\n";
-
+  cout << "US Dollars = $"<< dollars;
+  return 0;
 }
